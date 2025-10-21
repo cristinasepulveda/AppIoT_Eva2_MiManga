@@ -7,6 +7,18 @@
     android:padding="24dp"
     android:background="#FFFFFF">
 
+    <!-- LOGO -->
+    <ImageView
+        android:id="@+id/logoApp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/mimanga"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:contentDescription="Logo de la aplicación" />
+
     <TextView
         android:id="@+id/tituloRecuperar"
         android:layout_width="wrap_content"
@@ -14,10 +26,10 @@
         android:text="Recuperar Contraseña"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoApp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="60dp" />
+        android:layout_marginTop="30dp" />
 
     <EditText
         android:id="@+id/etCorreo"
@@ -49,6 +61,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"/>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+

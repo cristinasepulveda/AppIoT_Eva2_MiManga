@@ -7,6 +7,18 @@
     android:padding="24dp"
     android:background="#FFFFFF">
 
+    <!-- LOGO -->
+    <ImageView
+        android:id="@+id/logoApp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/mimanga"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:contentDescription="Logo de la aplicación" />
+
     <TextView
         android:id="@+id/tituloRegistro"
         android:layout_width="wrap_content"
@@ -14,28 +26,39 @@
         android:text="Registrar Cuenta"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoApp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="30dp"/>
 
     <EditText
-        android:id="@+id/etNuevoUsuario"
+        android:id="@+id/etNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Nuevo usuario"
+        android:hint="Nombre completo"
         app:layout_constraintTop_toBottomOf="@id/tituloRegistro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="40dp"/>
 
     <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/etNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
         android:id="@+id/etNuevaClave"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Nueva contraseña"
+        android:hint="Contraseña"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@id/etNuevoUsuario"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"/>
@@ -59,6 +82,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"/>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+

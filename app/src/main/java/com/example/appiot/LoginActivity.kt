@@ -1,6 +1,7 @@
 package com.example.appiot
 
 import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -13,39 +14,40 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val usuario = findViewById<EditText>(R.id.etUsuario)
+        val email = findViewById<EditText>(R.id.etEmailLogin)
         val clave = findViewById<EditText>(R.id.etClave)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val btnRegistrar = findViewById<Button>(R.id.btnRegistrar)
         val btnRecuperar = findViewById<Button>(R.id.btnRecuperar)
 
-        // --- Botón Iniciar Sesión ---
         btnLogin.setOnClickListener {
-            val user = usuario.text.toString()
+            val mail = email.text.toString()
             val pass = clave.text.toString()
 
+            val prefs = getSharedPreferences("AppIoTPrefs", Context.MODE_PRIVATE)
+            val savedEmail = prefs.getString("email", null)
+            val savedPass = prefs.getString("clave", null)
+            val savedName = prefs.getString("nombre", "")
+
             val builder = AlertDialog.Builder(this)
-            if (user == "admin" && pass == "1234") {
-                builder.setTitle("Inicio de sesión correcto")
-                builder.setMessage("Bienvenido $user 👋")
+            if (mail == savedEmail && pass == savedPass) {
+                builder.setTitle("Inicio de sesión exitoso")
+                builder.setMessage("Bienvenido, $savedName 👋")
             } else {
                 builder.setTitle("Error")
-                builder.setMessage("Usuario o contraseña incorrectos.")
+                builder.setMessage("Correo o contraseña incorrectos.")
             }
             builder.setPositiveButton("Aceptar", null)
             builder.show()
         }
 
-        // --- Botón Registrar ---
         btnRegistrar.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
 
-        // --- Botón Recuperar clave ---
         btnRecuperar.setOnClickListener {
-            val intent = Intent(this, RecoverActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, RecoverActivity::class.java))
         }
     }
 }
+

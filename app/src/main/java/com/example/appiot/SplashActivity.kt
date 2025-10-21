@@ -12,10 +12,9 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Simulación de lectura del estado Bluetooth
         Handler(Looper.getMainLooper()).postDelayed({
             mostrarDialogoBluetooth()
-        }, 1000) // espera 1 segundo antes del mensaje
+        }, 1000)
     }
 
     private fun mostrarDialogoBluetooth() {
@@ -23,11 +22,10 @@ class SplashActivity : AppCompatActivity() {
         builder.setTitle("Bluetooth")
         builder.setMessage("El estado de Bluetooth ha sido leído correctamente.")
         builder.setPositiveButton("Aceptar") { _, _ ->
-            // Luego de aceptar, pasa al Login
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
-        builder.setCancelable(false) // evita cerrar el diálogo accidentalmente
+        builder.setCancelable(false)
         builder.show()
     }
 }

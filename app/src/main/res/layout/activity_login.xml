@@ -7,6 +7,18 @@
     android:padding="24dp"
     android:background="#FFFFFF">
 
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoApp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/mimanga"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:contentDescription="Logo de la aplicación" />
+
     <TextView
         android:id="@+id/tituloLogin"
         android:layout_width="wrap_content"
@@ -14,17 +26,17 @@
         android:text="Iniciar Sesión"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoApp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="30dp"/>
 
     <EditText
-        android:id="@+id/etUsuario"
+        android:id="@+id/etEmailLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Usuario"
-        android:inputType="text"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
         app:layout_constraintTop_toBottomOf="@id/tituloLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +48,7 @@
         android:layout_height="wrap_content"
         android:hint="Contraseña"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@id/etUsuario"
+        app:layout_constraintTop_toBottomOf="@id/etEmailLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"/>
@@ -76,5 +88,4 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
