@@ -10,6 +10,7 @@
         android:id="@+id/logoSplash"
         android:layout_width="300dp"
         android:layout_height="300dp"
+
         android:src="@drawable/captura_de_pantalla_2025_11_04_155016"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
