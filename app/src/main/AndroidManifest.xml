@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,6 +16,10 @@
         <activity android:name=".RecoverActivity" android:exported="false" />
         <activity android:name=".RegisterActivity" android:exported="false" />
         <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".AgregarLibroActivity" />
+        <activity android:name=".VerLibroActivity" />
+
 
         <activity
             android:name=".SplashActivity"

@@ -18,7 +18,7 @@ RecoverActivity: Simula el envío de correo de recuperación con un AlertDialog.
 Flujo de navegación
 
 1. SplashActivity ->  AlertDialog Bluetooth -> LoginActivity
-2. LoginActivity:
+2.[app](app) LoginActivity:
    - Si se selecciona "Registrar", pasa a RegisterActivity  
    - Si se selecciona "Recuperar clave", pasa a RecoverActivity
 

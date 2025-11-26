@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "295392158413",
+    "project_id": "appeva3mimanga",
+    "storage_bucket": "appeva3mimanga.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295392158413:android:8c6b0c54d278044e1e3f84",
+        "android_client_info": {
+          "package_name": "com.example.appiot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295392158413-lp1ntsnah5d7jmdk8btjum96v9fpjq25.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appiot",
+            "certificate_hash": "8417e675b95c04f21d039fb2a450326f8b1e4080"
+          }
+        },
+        {
+          "client_id": "295392158413-7j8siumeol2eiuma5vrn08oeqp55kt98.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaBgLZjxiAJM2w2BpWBI7F4LIcI6LQVxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295392158413-7j8siumeol2eiuma5vrn08oeqp55kt98.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

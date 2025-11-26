@@ -1,46 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:background="#FFFFFF">
+    android:padding="24dp">
 
-    <!-- Logo -->
     <ImageView
         android:id="@+id/logoApp"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:src="@drawable/logobien"
+        android:contentDescription="Logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp"
-        android:contentDescription="Logo de la aplicación" />
-
-    <TextView
-        android:id="@+id/tituloLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Iniciar Sesión"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/logoApp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <EditText
         android:id="@+id/etEmailLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Correo electrónico"
-        android:inputType="textEmailAddress"
-        app:layout_constraintTop_toBottomOf="@id/tituloLogin"
+        app:layout_constraintTop_toBottomOf="@id/logoApp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="24dp"/>
 
     <EditText
         android:id="@+id/etClave"
@@ -51,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@id/etEmailLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="12dp"/>
 
     <Button
         android:id="@+id/btnLogin"
@@ -61,31 +44,34 @@
         app:layout_constraintTop_toBottomOf="@id/etClave"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="16dp"/>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btnGoogle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/btnLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="12dp"/>
 
-        <Button
-            android:id="@+id/btnRegistrar"
-            android:text="Registrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear cuenta"
+        app:layout_constraintTop_toBottomOf="@id/btnGoogle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="18dp"/>
 
-        <Space
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btnRecuperar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recuperar contraseña"
+        app:layout_constraintTop_toBottomOf="@id/btnGoogle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"/>
 
-        <Button
-            android:id="@+id/btnRecuperar"
-            android:text="Recuperar clave"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+

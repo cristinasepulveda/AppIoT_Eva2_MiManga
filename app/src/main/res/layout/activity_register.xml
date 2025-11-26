@@ -1,59 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:background="#FFFFFF">
+    android:padding="24dp">
 
-    <!-- LOGO -->
     <ImageView
         android:id="@+id/logoApp"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:src="@drawable/logobien"
+        android:contentDescription="Logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp"
-        android:contentDescription="Logo de la aplicación" />
-
-    <TextView
-        android:id="@+id/tituloRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registrar Cuenta"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/logoApp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <EditText
         android:id="@+id/etNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Nombre completo"
-        app:layout_constraintTop_toBottomOf="@id/tituloRegistro"
+        app:layout_constraintTop_toBottomOf="@id/logoApp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="18dp"/>
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Correo electrónico"
-        android:inputType="textEmailAddress"
         app:layout_constraintTop_toBottomOf="@id/etNombre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="12dp"/>
 
     <EditText
-        android:id="@+id/etNuevaClave"
+        android:id="@+id/etClave"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
@@ -61,26 +44,27 @@
         app:layout_constraintTop_toBottomOf="@id/etEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="12dp"/>
 
     <Button
-        android:id="@+id/btnRegistrarCuenta"
+        android:id="@+id/btnRegistrar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Registrar"
-        app:layout_constraintTop_toBottomOf="@id/etNuevaClave"
+        app:layout_constraintTop_toBottomOf="@id/etClave"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="16dp"/>
 
     <Button
         android:id="@+id/btnVolverLoginDesdeRegistro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Volver al Login"
-        app:layout_constraintTop_toBottomOf="@id/btnRegistrarCuenta"
+        app:layout_constraintTop_toBottomOf="@id/btnRegistrar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
 

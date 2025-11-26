@@ -29,3 +29,6 @@ class SplashActivity : AppCompatActivity() {
         builder.show()
     }
 }
+
+
+
